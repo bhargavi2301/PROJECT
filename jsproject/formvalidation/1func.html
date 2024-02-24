@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- form validation with one function -->
+</head>
+<body>
+    <label>Enter a username:</label>
+    <input type="text" id="username"  onblur="validation('username','span1')"><span id="span1"></span><br><br>
+    <label>Enter a emailid:</label>
+    <input type="text" id="email" onblur="validation('email','span2')"><span id="span1"></span><br><br>
+    <label>Enter a password:</label>
+    <input type="text" id="pass" onblur="validation('pass','span3')"><span id="span1"></span><br><br>
+    <label>Enter a mobile:</label>
+    <input type="text" id="number" onblur="validation('number','span4')"><span id="span1"></span><br><br>
+
+    <script>
+        function validation(id,span) {
+          
+            var datail1 = document.getElementById(id)
+            var error = document.getElementById(span)
+
+
+
+            if (datail1.value == "") {
+                error.innerText="please  enter valid " + id;
+                error.style.color="red"
+
+            }
+        }
+    </script>
+</body>
+</html>

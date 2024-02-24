@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- simple form validation -->
+</head>
+
+<body>
+    <label for="name">Enter a name: </label>
+    <input type="text" id="name" onblur="validationName()"><span id="err1"></span><br><br>
+    <label for="email">Enter a Email: </label>
+    <input type="text" id="email" onblur="validationEmail()"><span id="err2"></span><br><br>
+    <label for="mobile">Enter a mobile: </label>
+    <input type="number" id="mobile" onblur="validationMobile()"><span id="err3"></span><br><br>
+    <label for="pass">Enter a password: </label>
+    <input type="password" id="pass" onblur="validationPass()"><span id="err4"></span><br><br>
+    <script>
+        function validationName() {
+            // console.log("hello");
+            let data1 = document.getElementById('name').value;
+            let data2 = document.getElementById('err1').value;
+            if (data1 == "") {
+                document.getElementById('err1').innerHTML = "Please Enter Your Name! "
+                err1.style.color="red"
+            }
+            //else{
+            //     document.getElementById('err1').innerHTML 
+            // }
+        }
+
+        function validationEmail(){
+            let dataA = document.getElementById('email').value;
+            let datab = document.getElementById('err2').value;
+            if (dataA=="") {
+                document.getElementById("err2").innerHTML="Please Enter Your email  !"
+                err2.style.color="red"
+
+            }
+            // else{
+            //     document.getElementById('err2').innerHTML 
+            // }
+            
+        }
+        function validationMobile(){
+            let dataC = document.getElementById('mobile').value;
+            let dataD = document.getElementById('err3').value;
+            if (dataC=="") {
+                document.getElementById("err3").innerHTML="Please Enter Your mobile number!"
+                err3.style.color="red"
+
+            }
+            // else{
+            //     document.getElementById('err3').innerHTML 
+            // }
+        }
+
+        function validationPass(){
+            let dataE= document.getElementById('password').value;
+            let dataF = document.getElementById('err4').value;
+            if (dataE=="") {
+                document.getElementById("err4").innerHTML="Please Enter Your password!"
+                err4.style.color="red"
+
+            }
+            // else{
+            //     document.getElementById('err4').innerHTML 
+            // }
+        }
+
+    </script>
+
+</body>
+
+</html>

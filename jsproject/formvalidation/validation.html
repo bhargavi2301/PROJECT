@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- validation form  -->
+</head>
+<body>
+    
+    NAME: <input type="text" onblur="validatationname()" id="name" pattern="[A-Za-z]"required=""> <span id="err1"></span><br>
+    MOBILE NUMBER: <input type="text"onblur="validatationnum()" id="number"><span id="err2" required="" pattern="{0-9}"></span><br>
+    EMAIL: <input type="text"onblur="validatationmail()" id="email"><span id="err3"required=""></span><br>
+    PASSWORD: <input  type="text"onblur="validatationpass()" id="mobile"><span id="err4"required="" minimum="8"></span>
+
+    <script>
+     function validatationname(){
+        var data1 = document.getElementById('name').value
+        var data2 = document.getElementById('err1').value
+
+        if (data1.length < 3) {
+            err1.style.color = "red";
+            err1.innerHTML = "Name must be at least 3 characters!!!";
+        } else {
+            // err1.innerHTML = "";
+        }
+
+    }
+    function validatationnum(){
+        var data1 = document.getElementById('name').value
+        var data2 = document.getElementById('err2').value
+
+        if (data1.length<10) {
+            err2.style.color = "red";
+            err2.innerHTML = "Number must be at least 10 number!!!";
+        }
+        
+    }
+    // function validatationmail(){
+    //     var data1 = document.getElementById('email').value
+    //     var data2 = document.getElementById('err3').value
+
+    //     if (data1.length<10) {
+    //         // requrired to @,
+    //         err3.style.color = "red";
+    //         err3.innerHTML = "Number must be at least 10 number!!!";
+    //     }
+        
+    // }
+    function validatationpass(){
+        var data1 = document.getElementById('password').value
+        var data2 = document.getElementById('err4').value
+
+        if (data1.length<10) {
+            // requrired to @,
+            err4.style.color = "red";
+            err4.innerHTML = "at least 8 characters must be"
+        }
+        
+    }
+        
+    </script>
+</body>
+</html>
